@@ -6,28 +6,31 @@ h1{
 
 input[type=text]:focus,input[type=text]:hover{
   outline: none;
-  width: 300px;
+  width: 75%;
   height: 60px;
 }
-@media only screen and (min-width: 768px){
-    input[type=text]{
-      width: 400px;
-      height: 50px;
-      white-space: nowrap;
-      border: none;
-      font-size: 1.7em;
-      font-family: "Roboto";
-      font-style: oblique;
-      padding-left: 50px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      border-radius: 30px;
-      -webkit-transition: width 0.3s, height 0.2s ease-in;
-    }
 
-    input[type=text]:focus,input[type=text]:hover{
-      outline: none;
-      width: 550px;
-      height: 60px;
-    }
+input[type=text]{
+  flex-shrink: 0;
+  flex-grow: 1;
+  height: 50px;
+  width: 50%;
+  max-width: 600px;
+  white-space: nowrap;
+  border: none;
+  font-size: 1.7em;
+  font-family: "Roboto";
+  font-style: oblique;
+  padding-left: 50px;
+  box-shadow: 0 0 50px #F5F5F5;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  transition: width 0.3s, height 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 768px){
+  h1{
+    margin-top: 25%;
+  }
 }
