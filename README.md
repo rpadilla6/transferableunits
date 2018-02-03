@@ -2,5 +2,5 @@
 For Hack UCI
 
 To Serve the FrontEnd:
-ng install
+npm install
 ng serve
