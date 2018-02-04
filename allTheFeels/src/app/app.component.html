@@ -16,16 +16,16 @@
     </div>
   </div>
 
-  <div class="rangeDisplay">
-    <h2>Sentiment Range</h2>
-    <div class="item item-2 rangeblock" fxFlexLayout="row" fxLayoutAlign="center center">
-      <div class="item item-3 rangeElemRed">-1 — -0.25</div>
-      <div class="item item-3 rangeElemYellow">-0.25 — 0.25</div>
-      <div class="item item-3 rangeElemGreen">0.25 — 1.0</div>
-    </div>
-  </div>
 
   <div *ngIf="displayScore==3">
+    <div class="rangeDisplay">
+      <h2>Sentiment Range</h2>
+      <div class="item item-2 rangeblock" fxFlexLayout="row" fxLayoutAlign="center center">
+        <div class="item item-3 rangeElemRed">-1 — -0.25</div>
+        <div class="item item-3 rangeElemYellow">-0.25 — 0.25</div>
+        <div class="item item-3 rangeElemGreen">0.25 — 1.0</div>
+      </div>
+    </div>
     <app-score-avg></app-score-avg>
   </div>
 
@@ -34,7 +34,7 @@
       <img src="/assets/Images/twitter.png">
     </div>
     <div class="item item-3 tweettext">
-      <a href="http://twitter.com/{{tweet.name}}">{{tweet.name}}</a>
+      <a href="http://twitter.com/{{tweet.name}}"target="_blank">{{tweet.name}}</a>
       <p>{{tweet.text}}</p>
     </div>
     <div class="item item-3 tweetscore">
