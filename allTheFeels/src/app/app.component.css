@@ -10,6 +10,13 @@ input[type=text]:focus,input[type=text]:hover{
   height: 60px;
 }
 
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+}
+
 .tweetlogo{
   border-radius: 15px;
   flex-grow: 0;
