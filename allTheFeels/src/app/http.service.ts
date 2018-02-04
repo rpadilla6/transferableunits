@@ -7,7 +7,7 @@ export class HttpService {
   constructor(private http: Http){
   }
 
-  private backEndUrl = 'https://20180203t162729-dot-allthefeels-1337.appspot.com/';
+  private backEndUrl = 'https://20180203t175745-dot-allthefeels-1337.appspot.com/';
   data;
 
   getTweets(searchTerm: String) {
