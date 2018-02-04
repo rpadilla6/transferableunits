@@ -5,10 +5,11 @@ import {AppComponent, SentimentComponent} from './app.component';
 import {DomService} from './dom.service';
 import {HttpModule} from "@angular/http";
 import { HttpService} from "./http.service";
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
-    AppComponent, SentimentComponent
+    AppComponent, SentimentComponent, LoadingComponent
   ],
   imports: [
     BrowserModule,
