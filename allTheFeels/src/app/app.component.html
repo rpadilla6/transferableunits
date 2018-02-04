@@ -11,13 +11,17 @@
   <div class="item item-2" fxFlexLayout="row" fxFill>
     <!--Remember to addToBody()-->
     <input #box name="search" type="text" placeholder="{{stuff}}" (keyup.enter)="searchTweet(box.value)">
+    <div>
+      <!--<img src="/assets/Images/Wow.gif">-->
+    </div>
   </div>
   <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
-    <div class="item item-3 tweetlogo" >
+    <div class="item item-3 tweetlogo">
       <img src="/assets/Images/twitter.png">
     </div>
     <div class="item item-3 tweettext">
-      {{tweet.text}}
+      <a href="http://twitter.com/{{tweet.name}}">{{tweet.name}}</a>
+      <p>{{tweet.text}}</p>
     </div>
     <div class="item item-3 tweetscore">
     </div>
