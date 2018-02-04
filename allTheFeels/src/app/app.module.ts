@@ -6,10 +6,11 @@ import {DomService} from './dom.service';
 import {HttpModule} from "@angular/http";
 import { HttpService} from "./http.service";
 import { LoadingComponent } from './loading/loading.component';
+import { ScoreAvgComponent } from './score-avg/score-avg.component';
 
 @NgModule({
   declarations: [
-    AppComponent, SentimentComponent, LoadingComponent
+    AppComponent, SentimentComponent, LoadingComponent, ScoreAvgComponent
   ],
   imports: [
     BrowserModule,

@@ -3,11 +3,61 @@ h1{
   font-family: 'Barlow Semi Condensed';
   font-size: 3.7em;
 }
+h2{
+  color: white;
+  font-family: 'Barlow Semi Condensed';
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
 input[type=text]:focus,input[type=text]:hover{
   outline: none;
   width: 75%;
   height: 60px;
+}
+
+.rangeDisplay{
+  margin-bottom: 50px;
+}
+.rangeblock{
+  font-family: "Barlow Semi Condensed";
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.scoreAverage{
+  max-width: 300px;
+  margin-top: 150px;
+}
+.gpa{
+  margin: -75px;
+}
+.rangeElemRed{
+  padding: .6em;
+  background-color: #ff3f3f;
+  color: white;
+}
+.rangeElemYellow{
+  padding: .6em;
+  background-color: #ffeb3f;
+  color: darkgrey;
+}
+.rangeElemGreen{
+  padding: .6em;
+  background-color: #3fff5b;
+  color: darkgrey;
+}
+.tweetscore{
+  height: 90px;
+  width: 90px;
+  min-height: 90px;
+  min-width: 90px;
+  background-color: #555;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.circle {
+  font-family: cabin condensed;
 }
 
 .tweetlogo{

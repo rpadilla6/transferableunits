@@ -9,6 +9,7 @@ export class HttpService {
 
   private backEndUrl = 'https://20180203t175745-dot-allthefeels-1337.appspot.com/';
   data;
+  private rejected = false;
 
   getTweets(searchTerm: String) {
     let promise = new Promise((resolve, reject) => {
@@ -17,10 +18,28 @@ export class HttpService {
         .then(res => {
           this.data = res.json();
           resolve();
+        }, rej => {
+          reject();
+          this.rejected = true;
         });
     });
     return promise;
   };
+
+  getAverage(){
+    let total = 0;
+
+    for (let item of this.data)
+    {
+      total = total + item['score'];
+    }
+
+    return (total / (this.data.length));
+  }
+
+  getRejected(){
+    return this.rejected;
+  }
 
   getData(){
     return this.data;
