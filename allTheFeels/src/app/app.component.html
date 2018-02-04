@@ -3,6 +3,6 @@
     <h1>
      How do people feel about...
     </h1>
-    <input type="text" placeholder="Bitcoin" name="search">
+    <input #search type="text" ngModel="query" placeholder="Bitcoin" (keyup.enter)="searchTweet(search.value)">
 </div>
 
