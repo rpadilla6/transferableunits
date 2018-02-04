@@ -3,6 +3,13 @@ h1{
   font-family: 'Barlow Semi Condensed';
   font-size: 3.7em;
 }
+h2{
+  color: white;
+  font-family: 'Barlow Semi Condensed';
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
 input[type=text]:focus,input[type=text]:hover{
   outline: none;
@@ -10,6 +17,26 @@ input[type=text]:focus,input[type=text]:hover{
   height: 60px;
 }
 
+.rangeblock{
+  font-family: "Barlow Semi Condensed";
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.rangeElemRed{
+  padding: .6em;
+  background-color: #ff3f3f;
+  color: white;
+}
+.rangeElemYellow{
+  padding: .6em;
+  background-color: #ffeb3f;
+  color: darkgrey;
+}
+.rangeElemGreen{
+  padding: .6em;
+  background-color: #3fff5b;
+  color: darkgrey;
+}
 .tweetlogo{
   border-radius: 15px;
   flex-grow: 0;
