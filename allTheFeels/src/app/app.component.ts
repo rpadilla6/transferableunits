@@ -9,7 +9,7 @@ import {HttpService} from "./http.service";
 })
 export class AppComponent {
   stuff: string;
-  constructor(private httpService: HttpService, domService: DomService) {
+  constructor(private httpService: HttpService, private domService: DomService) {
     this.stuff = 'Bitcoin';
   }
 
@@ -36,4 +36,3 @@ export class AppComponent {
   styleUrls: ['./app.component.css']
 })
 export class SentimentComponent { }
-}

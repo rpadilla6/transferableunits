@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Http} from "@angular/http";
-import 'rxjs/RX';
 
 @Injectable()
 export class HttpService {
@@ -8,7 +7,7 @@ export class HttpService {
   constructor(private http: Http){
   }
 
-  private backEndUrl = 'https://allthefeels-1337.appspot.com/';
+  private backEndUrl = 'https://20180203t162729-dot-allthefeels-1337.appspot.com/';
   data;
 
   getTweets(searchTerm: String) {
@@ -17,7 +16,7 @@ export class HttpService {
         .toPromise()
         .then(res => {
           this.data = res.json();
-          resolve()
+          resolve();
         });
     });
     return promise;
