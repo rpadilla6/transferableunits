@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import {DomService} from './dom.service';
 import {HttpService} from './http.service';
+import { DecimalPipe } from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,18 @@ export class AppComponent {
       console.log(this.tweets[1].text);
       this.dataLoading = false;
     });
+  }
+
+  getColour(score){
+    console.log(score);
+
+    if(score > 0.25){
+      return 'green';
+    }else if(score > -0.25){
+      return 'yellow';
+    }else{
+      return 'red';
+    }
   }
 }
 
