@@ -13,14 +13,17 @@ export class AppComponent {
     this.stuff = 'Bitcoin';
   }
   tweets: Array<any> = [];
+  dataLoading: boolean = false;
 
   searchTweet(searchTerm) {
+    this.dataLoading = true;
     console.log(searchTerm);
     this.httpService.getTweets(searchTerm).then(_ => {
       this.tweets = [];
       this.tweets = this.httpService.getData();
       console.log('fulfilled');
       console.log(this.tweets[1].text);
+      this.dataLoading = false;
     });
   }
 }
