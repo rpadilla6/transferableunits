@@ -1,25 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
 html{
   background: linear-gradient(#1da1f2, #b7e3ff);
   background-attachment: fixed;
-}
-
-.search{
-  position: absolute;
-  top: 5%;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-}
-
-@media only screen and (min-width: 768px){
-  .search{
-    position: absolute;
-    top: 25%;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-  }
 }

@@ -1,8 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div  style="text-align:center">
+<div  class ="container search"
+      fxLayout ="column"
+      fxLayoutAlign="space-between center"
+      fxLayoutGap="10px"
+      style="text-align:center">
+  <div class="item item-1" fxFlex="50%">
     <h1>
      How do people feel about...
     </h1>
-    <input type="text" placeholder="Bitcoin" name="search">
+  </div>
+  <div class="item item-2" fxFlexLayout="row" fxFill>
+    <!--Remember to addToBody()-->
+    <input #box name="search" type="text" placeholder="{{stuff}}" (keyup.enter)="searchTweet(box.value)">
+  </div>
+  <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
+    <div class="item item-3 tweetlogo" >
+      <img src="/assets/Images/twitter.png">
+    </div>
+    <div class="item item-3 tweettext">
+      {{tweet.text}}
+    </div>
+    <div class="item item-3 tweetscore">
+    </div>
+  </div>
 </div>
-
