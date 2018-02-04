@@ -15,6 +15,11 @@
       <!--<img src="/assets/Images/Wow.gif">-->
     </div>
   </div>
+
+  <div *ngIf="displayScore==3">
+    <app-score-avg></app-score-avg>
+  </div>
+
   <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
     <div class="item item-3 tweetlogo">
       <img src="/assets/Images/twitter.png">
@@ -26,7 +31,9 @@
     <div class="item item-3 tweetscore">
     </div>
   </div>
+
   <div *ngIf="dataLoading">
     <app-loading></app-loading>
   </div>
+
 </div>

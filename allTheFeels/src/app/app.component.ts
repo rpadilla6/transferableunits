@@ -14,9 +14,13 @@ export class AppComponent {
   }
   tweets: Array<any> = [];
   dataLoading: boolean = false;
+  displayScore: number = 0;
 
   searchTweet(searchTerm) {
+    this.tweets = [];
+    this.displayScore = 0;
     this.dataLoading = true;
+
     console.log(searchTerm);
     this.httpService.getTweets(searchTerm).then(_ => {
       this.tweets = [];
@@ -24,6 +28,7 @@ export class AppComponent {
       console.log('fulfilled');
       console.log(this.tweets[1].text);
       this.dataLoading = false;
+      this.displayScore = 3;
     });
   }
 }

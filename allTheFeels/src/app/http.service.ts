@@ -7,7 +7,7 @@ export class HttpService {
   constructor(private http: Http){
   }
 
-  private backEndUrl = 'https://20180203t175745-dot-allthefeels-1337.appspot.com/';
+  private backEndUrl = 'http://127.0.0.1:5000/';
   data;
 
   getTweets(searchTerm: String) {
@@ -21,6 +21,17 @@ export class HttpService {
     });
     return promise;
   };
+
+  getAverage(){
+    let total = 0;
+
+    for (let item of this.data)
+    {
+      total = total + item['score'];
+    }
+
+    return (total / (this.data.length));
+  }
 
   getData(){
     return this.data;
