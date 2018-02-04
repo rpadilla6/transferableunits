@@ -17,7 +17,7 @@
   </div>
 
 
-  <div *ngIf="displayScore==3">
+  <div *ngIf="displayScore==3" class="item item-2 averageInfo" fxFlexLayout="column" fxFill>
     <div class="rangeDisplay">
       <h2>Sentiment Range</h2>
       <div class="item item-2 rangeblock" fxFlexLayout="row" fxLayoutAlign="center center">
@@ -26,19 +26,24 @@
         <div class="item item-3 rangeElemGreen">0.25 — 1.0</div>
       </div>
     </div>
-    <app-score-avg></app-score-avg>
+    <div class="scoreAverage" fxLayout="column" fxLayoutAlign="space-between center" >
+      <app-score-avg></app-score-avg>
+    </div>
   </div>
 
   <div *ngIf="!broke; else otherContent">
     <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
-      <div class="item item-3 tweetlogo">
+      <div class="item item-3 tweetlogo" fxFlex="75px">
         <img src="/assets/Images/twitter.png">
       </div>
-      <div class="item item-3 tweettext">
+      <div class="item item-3 tweettext" fxFlex="80%">
         <a href="http://twitter.com/{{tweet.name}}"target="_blank">{{tweet.name}}</a>
         <p>{{tweet.text}}</p>
       </div>
-      <div class="item item-3 tweetscore">
+      <div [style.background-color]='getColour(tweet.score)' class="item item-3 tweetscore"  fxFlexLayout="column" fxLayoutAlign="center center" >
+        <div class="circle"   >
+          {{tweet.score | number: '1.1-1'}}
+        </div>
       </div>
     </div>
   </div>

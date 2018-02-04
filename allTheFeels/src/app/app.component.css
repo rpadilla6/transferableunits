@@ -17,10 +17,20 @@ input[type=text]:focus,input[type=text]:hover{
   height: 60px;
 }
 
+.rangeDisplay{
+  margin-bottom: 50px;
+}
 .rangeblock{
   font-family: "Barlow Semi Condensed";
   font-weight: bold;
   font-size: 1.2em;
+}
+.scoreAverage{
+  max-width: 300px;
+  margin-top: 150px;
+}
+.gpa{
+  margin: -75px;
 }
 .rangeElemRed{
   padding: .6em;
@@ -37,6 +47,19 @@ input[type=text]:focus,input[type=text]:hover{
   background-color: #3fff5b;
   color: darkgrey;
 }
+.tweetscore{
+  height: 90px;
+  width: 90px;
+  min-height: 90px;
+  min-width: 90px;
+  background-color: #555;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.circle {
+  font-family: cabin condensed;
+}
+
 .tweetlogo{
   border-radius: 15px;
   flex-grow: 0;

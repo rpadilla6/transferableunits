@@ -7,7 +7,7 @@ export class HttpService {
   constructor(private http: Http){
   }
 
-  private backEndUrl = 'http://127.0.0.1:5000/';
+  private backEndUrl = 'https://20180203t175745-dot-allthefeels-1337.appspot.com/';
   data;
   private rejected = false;
 
