@@ -17,10 +17,13 @@
   </div>
   <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
     <div class="item item-3 tweetlogo">
+      <img src="/assets/Images/twitter.png">
     </div>
     <div class="item item-3 tweettext">
       <a href="http://twitter.com/{{tweet.name}}">{{tweet.name}}</a>
       <p>{{tweet.text}}</p>
+    </div>
+    <div class="item item-3 tweetscore">
     </div>
   </div>
 </div>

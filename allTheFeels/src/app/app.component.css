@@ -11,10 +11,23 @@ input[type=text]:focus,input[type=text]:hover{
 }
 
 .tweetlogo{
+  border-radius: 15px;
+  flex-grow: 0;
+  max-width:75px;
+  max-height:75px;
+  width: 75px;
+  height: 75px;
   min-width: 75px;
   min-height: 75px;
   background-color: #1da1f2;
   margin: 25px 25px 25px 25px;
+  box-shadow: none;
+  border: none;
+}
+
+img{
+  width: 100%;
+  height: 100%;
 }
 .tweetblock{
   width: 80%;
