@@ -9,6 +9,7 @@ export class HttpService {
 
   private backEndUrl = 'http://127.0.0.1:5000/';
   data;
+  private rejected = false;
 
   getTweets(searchTerm: String) {
     let promise = new Promise((resolve, reject) => {
@@ -17,6 +18,9 @@ export class HttpService {
         .then(res => {
           this.data = res.json();
           resolve();
+        }, rej => {
+          reject();
+          this.rejected = true;
         });
     });
     return promise;
@@ -31,6 +35,10 @@ export class HttpService {
     }
 
     return (total / (this.data.length));
+  }
+
+  getRejected(){
+    return this.rejected;
   }
 
   getData(){

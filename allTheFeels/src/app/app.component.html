@@ -29,17 +29,23 @@
     <app-score-avg></app-score-avg>
   </div>
 
-  <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
-    <div class="item item-3 tweetlogo">
-      <img src="/assets/Images/twitter.png">
-    </div>
-    <div class="item item-3 tweettext">
-      <a href="http://twitter.com/{{tweet.name}}"target="_blank">{{tweet.name}}</a>
-      <p>{{tweet.text}}</p>
-    </div>
-    <div class="item item-3 tweetscore">
+  <div *ngIf="!broke; else otherContent">
+    <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
+      <div class="item item-3 tweetlogo">
+        <img src="/assets/Images/twitter.png">
+      </div>
+      <div class="item item-3 tweettext">
+        <a href="http://twitter.com/{{tweet.name}}"target="_blank">{{tweet.name}}</a>
+        <p>{{tweet.text}}</p>
+      </div>
+      <div class="item item-3 tweetscore">
+      </div>
     </div>
   </div>
+
+  <ng-template #otherContent>
+    <p style="font-family: 'Barlow Semi Condensed'; color: red; font-size: 2em;">ERROR: Endpoint failed</p>
+  </ng-template>
 
   <div *ngIf="dataLoading">
     <app-loading></app-loading>

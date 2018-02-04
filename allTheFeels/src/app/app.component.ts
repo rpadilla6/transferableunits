@@ -15,6 +15,7 @@ export class AppComponent {
   tweets: Array<any> = [];
   dataLoading: boolean = false;
   displayScore: number = 0;
+  broke: boolean = false;
 
   searchTweet(searchTerm) {
     this.tweets = [];
@@ -29,6 +30,10 @@ export class AppComponent {
       console.log(this.tweets[1].text);
       this.dataLoading = false;
       this.displayScore = 3;
+    }, rej =>{
+      console.log("endpoint broke")
+      this.broke = true;
+      this.dataLoading = false;
     });
   }
 }
