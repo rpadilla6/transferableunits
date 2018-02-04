@@ -32,9 +32,9 @@ export class DomService {
     document.body.appendChild(domElem);
 
     // Wait some time and remove it from the component tree and from the DOM
-    setTimeout(() => {
-      this.appRef.detachView(componentRef.hostView);
-      componentRef.destroy();
-    }, 5000);
+   // setTimeout(() => {
+   //   this.appRef.detachView(componentRef.hostView);
+   //   componentRef.destroy();
+   // }, 5000);
   }
 }

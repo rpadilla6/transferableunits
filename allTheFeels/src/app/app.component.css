@@ -10,6 +10,29 @@ input[type=text]:focus,input[type=text]:hover{
   height: 60px;
 }
 
+.tweetlogo{
+  min-width: 75px;
+  min-height: 75px;
+  background-color: #1da1f2;
+  margin: 25px 25px 25px 25px;
+}
+.tweetblock{
+  width: 80%;
+  max-width: 1000px;
+  min-height: 100px;
+  margin-top: 35px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #F5F5F5;
+}
+.tweettext{
+  padding:  30px 20px 20px 20px;
+  font-size: 1.2em;
+  font-family: helvetica;
+  text-align: left;
+}
 input[type=text]{
   flex-shrink: 0;
   flex-grow: 1;

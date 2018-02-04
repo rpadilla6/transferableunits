@@ -12,4 +12,11 @@
     <!--Remember to addToBody()-->
     <input #box name="search" type="text" placeholder="{{stuff}}" (keyup.enter)="searchTweet(box.value)">
   </div>
+  <div class="item item-2 tweetblock" fxFlexLayout="row" fxLayoutAlign="start center" *ngFor="let tweet of tweets" id="tweetboxes">
+    <div class="item item-3 tweetlogo">
+    </div>
+    <div class="item item-3 tweettext">
+      {{tweet.text}}
+    </div>
+  </div>
 </div>
