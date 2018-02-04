@@ -1,20 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-
-import { AppComponent } from './app.component';
+import {AppComponent, SentimentComponent} from './app.component';
+import {DomService} from './dom.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, SentimentComponent
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [DomService],
+  entryComponents: [SentimentComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
