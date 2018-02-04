@@ -17,10 +17,20 @@ input[type=text]:focus,input[type=text]:hover{
   height: 60px;
 }
 
+.rangeDisplay{
+  margin-bottom: 50px;
+}
 .rangeblock{
   font-family: "Barlow Semi Condensed";
   font-weight: bold;
   font-size: 1.2em;
+}
+.scoreAverage{
+  max-width: 300px;
+  margin-top: 150px;
+}
+.gpa{
+  margin: -75px;
 }
 .rangeElemRed{
   padding: .6em;

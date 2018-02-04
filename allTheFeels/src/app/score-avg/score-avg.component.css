@@ -1,8 +1,10 @@
 .container {
-  font-family: Helvetica;
+  font-family: "Barlow Semi Condensed";
   font-weight: bold;
-  font-size: 38px;
-  width: 55%;
-  color: #708090;
-  fill: #708090;
+  font-size: 4em;
+  color: white;
+  fill: white;
+}
+.gpa{
+  margin: -75px;
 }
